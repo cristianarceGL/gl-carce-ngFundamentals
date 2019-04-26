@@ -5,7 +5,7 @@ A demo CRUD app for student record management system built with Angular 7 and Fi
 Run `npm install` to install required dependencies.
 
 ## Project Demo
-[https://bit.ly/2OxQ1Dm](https://bit.ly/2OxQ1Dm) \
+[Angular Fundamentals; Coda Labs #1, #2, #3](https://gl-carce-ngfundamentals.firebaseapp.com/view-contacts) \
 
 ## Step by Step Article
 [Angular 7 Firebase5 CRUD Operations with Reactive Forms](https://www.positronx.io/angular-7-firebase-5-crud-operations-with-reactive-forms)
