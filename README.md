@@ -1,4 +1,4 @@
-# AngularFirebaseStudentDemoApp
+# Angular Fundamentals Demo App
 
 A demo CRUD app for student record management system built with Angular 7 and Firebase 5 Real-time NoSQL cloud daatabase. 
 
