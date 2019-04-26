@@ -1,0 +1,66 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <div>
+    <h1 class="h2 text-white">Add Gorilla</h1>
+    <p class="custom-text  text-white">Add the contact information for the new gorilla</p>
+  </div>  
+  <a routerLink="/view-contacts" class="btn btn-success" style="background: #0B658F">
+    <i class="fas fa-arrow-left custom-fa-plus"></i>
+    Back
+  </a>
+</div>
+<!-- Contact form -->
+<form [formGroup]="contactForm" (ngSubmit)="submitContactData()" novalidate>
+  <div class="w-85">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="row">
+        <!-- <div class="col-md-12 mb-3">
+          <label class="text-white">ID Number</label>
+          <input type="text" placeholder="Type your ID number" formControlName="id" class="form-control" required>
+          <p *ngIf="id.touched && id.invalid" class="error"><sup>*</sup>Please enter your ID</p>
+          <p *ngIf="id.errors?.minlength" class="error"><sup>*</sup>ID shouldn't be less than 5 digits</p>
+        </div> -->
+        <div class="col-md-12 mb-3">
+          <label class="text-white">Name</label>
+          <input type="text" placeholder="Type first name" [value]="contactForm.get('firstName').value | capital" formControlName="firstName" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="firstName.touched && firstName.invalid" class="error"><sup>*</sup>Please enter at least first name</p>
+          <p *ngIf="firstName.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 2 words</p>
+        </div>
+        <div class="col-md-12 mb-3">
+          <label class="text-white">Last name</label>
+          <input type="text" placeholder="Type your last name" [value]="contactForm.get('lastName').value | capital"  formControlName="lastName" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label class="text-white">Email</label>
+          <input type="email" placeholder="Type your email" formControlName="email" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="email.touched && email.invalid" class="error"><sup>*</sup>Please provide email</p>
+          <p *ngIf="email.errors?.pattern" class="error"><sup>*</sup>Please enter correct email</p>
+        </div>
+        <div class="col-md-12 mb-3">
+          <label class="text-white">Phone number</label>
+          <input type="text" placeholder="Type your phone number" formControlName="phone" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="phone.touched && phone.invalid" class="error"><sup>*</sup>Please provide contact
+            number</p>
+          <p *ngIf="phone.errors?.pattern" class="error"><sup>*</sup>Use numbers only
+            number</p>
+        </div>
+      </div>
+      <div class="form-group text-right">
+        <a routerLink="/view-contacts" class="btn btn-secondary gap-right" style="background: #979797">
+          Cancel
+          <i style="font-size:16px" class="fa">&#xf00d;</i>
+        </a>
+        <button type="submit" class="btn btn-success" [disabled]="!contactForm.valid" style="background: #0B658F">
+          Add Contact
+          <i class="fas fa-arrow-left custom-fa-plus"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</form><!-- Contact form ends-->
