@@ -1,0 +1,7 @@
+<ul *ngIf="!!pokemons" class="pokemon-list">
+  <li *ngFor="let pokemon of pokemons">
+    <a routerLink="/pokemon/{{ pokemon.id }}">
+      <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item
+    ></a>
+  </li>
+</ul>
